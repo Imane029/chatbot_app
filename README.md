@@ -1,16 +1,62 @@
-# chatbot_app
+# 🤖 ChatBot
 
-A new Flutter project.
+Ce projet Flutter est une application de chatbot intelligent utilisant l'API d'OpenAI (GPT-4o).  
+Elle permet à l'utilisateur de poser des questions et de recevoir des réponses automatiques en langage naturel, simulant une conversation fluide avec un assistant virtuel.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Fonctionnalités
 
-A few resources to get you started if this is your first Flutter project:
+- Interface utilisateur simple et réactive
+- Envoi et affichage des messages utilisateur / assistant
+- Requêtes HTTP vers l'API OpenAI pour générer les réponses
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠 Technologies utilisées
+
+- Flutter (framework multiplateforme)
+- Dart (langage de programmation)
+- HTTP (pour consommer l'API)
+- OpenAI GPT-4o
+
+---
+
+## 🔧 Instructions d'installation
+
+1. Cloner le dépôt
+   ```bash
+   git clone https://github.com/Erradilatifa/Chatbot-app.git
+   cd Chatbot-app
+   ```
+
+2. Installer les dépendances
+   ```bash
+   flutter pub get
+   ```
+
+3. Ajouter votre clé API OpenAI dans un fichier `.env` (ou dans la configuration de votre choix)
+   ```
+   OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   ```
+
+4. Exécuter l'application
+   ```bash
+   flutter run
+   ```
+
+---
+
+## 📸 Captures d'écran
+
+- ✅ Page de connexion  
+  ![Page de connexion](page1.png)
+
+- ✅ Mot de passe oublié  
+  ![Mot de passe oublié](pageee3.png)
+
+- 🤖 Assistant virtuel  
+  ![Assistant virtuel](page22.png)
+
+- ❓ Une autre question  
+  ![Autre question](page4.png)
