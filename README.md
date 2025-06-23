@@ -46,17 +46,3 @@ Elle permet à l'utilisateur de poser des questions et de recevoir des réponses
    ```
 
 ---
-
-## 📸 Captures d'écran
-
-- ✅ Page de connexion  
-  ![Page de connexion](https://private-user-images.githubusercontent.com/158619453/449662740-c5871d3f-135c-4edf-ae5b-ec165a3c106c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA3MTMzMDQsIm5iZiI6MTc1MDcxMzAwNCwicGF0aCI6Ii8xNTg2MTk0NTMvNDQ5NjYyNzQwLWM1ODcxZDNmLTEzNWMtNGVkZi1hZTViLWVjMTY1YTNjMTA2Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYyM1QyMTEwMDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01NjFmZGE2OTExMWRiODg3YTk0ZjdjZDVkM2RiNjc5MDhlOTc2NjI1NDllNzIwNGM4YzI0NGU4NjFjYTUyY2ZmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Gyl5ZtfNeTcn9ardbMzUCVm6kHXQkODoUHUPGBWXnt4)
-
-- ✅ Mot de passe oublié  
-  ![Mot de passe oublié](pageee3.png)
-
-- 🤖 Assistant virtuel  
-  ![Assistant virtuel](page22.png)
-
-- ❓ Une autre question  
-  ![Autre question](page4.png)
