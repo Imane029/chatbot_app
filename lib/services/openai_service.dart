@@ -8,18 +8,18 @@ class OpenAIService {
   OpenAIService(this._apiKey);
 
   Future<String> getChatCompletion(String prompt) async {
-    final url = Uri.parse('https://api.openai.com/v1/chat/completions'); // Endpoint pour les completions de chat
+    final url = Uri.parse('https://api.openai.com/v1/chat/completions');
     final headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer $_apiKey',
+      'Authorization': 'Bearer ${_apiKey.trim()}',  // Enlever espaces accidentels
     };
     final body = jsonEncode({
-      'model': 'gpt-3.5-turbo', // Ou 'gpt-4' si vous y avez accès
+      'model': 'gpt-3.5-turbo',
       'messages': [
         {'role': 'user', 'content': prompt}
       ],
-      'max_tokens': 200, // Limite la longueur de la réponse du chatbot
-      'temperature': 0.7, // Contrôle la créativité (0.0 très factuel, 1.0 très créatif)
+      'max_tokens': 200,
+      'temperature': 0.7,
     });
 
     try {
@@ -27,22 +27,29 @@ class OpenAIService {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        // Assurez-vous que la structure de la réponse est correcte
-        if (data['choices'] != null && data['choices'].isNotEmpty &&
+        if (data['choices'] != null &&
+            data['choices'].isNotEmpty &&
             data['choices'][0]['message'] != null &&
             data['choices'][0]['message']['content'] != null) {
           return data['choices'][0]['message']['content'];
         } else {
           return 'Désolé, l\'IA n\'a pas pu générer de réponse.';
         }
+      } else if (response.statusCode == 429) {
+        // Gestion spécifique des erreurs de dépassement de quota ou trop de requêtes
+        return 'Vous avez envoyé trop de requêtes. Veuillez patienter un moment.';
+      } else if (response.statusCode == 401) {
+        // Clé API invalide
+        return 'Erreur d\'authentification. Veuillez vérifier votre clé API.';
       } else {
-        print('Erreur d\'API OpenAI: ${response.statusCode}');
-        print('Corps de la réponse: ${response.body}');
-        return 'Désolé, une erreur est survenue lors de la communication avec l\'IA. Code: ${response.statusCode}';
+        print('Erreur API OpenAI : ${response.statusCode}');
+        print('Réponse : ${response.body}');
+        return 'Erreur inattendue (code : ${response.statusCode}).';
       }
     } catch (e) {
-      print('Erreur réseau ou autre dans OpenAIService: $e');
-      return 'Désolé, je n\'ai pas pu traiter votre demande pour le moment (erreur réseau).';
+      print('Erreur réseau ou autre : $e');
+      return 'Erreur réseau, veuillez vérifier votre connexion.';
     }
   }
+
 }

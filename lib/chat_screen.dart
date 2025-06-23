@@ -25,7 +25,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   // TOUJOURS utiliser une méthode sécurisée pour stocker votre clé API
   // Pour le développement, vous pouvez la mettre ici, mais JAMAIS pour la production !
-  final String openAIApiKey = 'VOTRE_CLE_API_OPENAI_ICI'; // <-- REMPLACEZ PAR VOTRE VRAIE CLÉ API
+  final String openAIApiKey = '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'; // <-- REMPLACEZ PAR VOTRE VRAIE CLÉ API
 
   @override
   void initState() {
