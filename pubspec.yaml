@@ -1,0 +1,24 @@
+name: chatbot_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Assurez-vous que cela correspond à votre version de Flutter SDK
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.2.1 # <--- ESSENTIEL POUR LES REQUÊTES HTTP
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0 # Ajusté à une version courante
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/ensts_logo.png # <--- Assurez-vous que cette ligne est présente et le chemin correct
